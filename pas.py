@@ -33,3 +33,12 @@ print(cols)
 
 ##saving to desired format 
 df.to_csv('modified.txt',index=False,sep='\t')
+
+##filtering data 
+
+new_df = df.loc[(df['Type 1'] == 'Grass') & (df['Type 2'] == 'Poison') & (df['HP'] > 70)]
+print()
+print(new_df)
+print()
+# print(df.loc[df['Total'] > 500, ['Generation','Legendary']] = ['Test 1', 'Test 2'])
+df.to_csv('modified.csv', index=False)
