@@ -28,5 +28,8 @@ print(df.iloc[9,1])
 cols = list(df.columns)
 print(cols)
 
-df = df[cols[0:4] + [cols[-1]] + cols[4:11]]
-print(df.head(2))
+# df = df[cols[0:4] + [cols[-1]] + cols[4:11]]
+# print(df.head(2))
+
+##saving to desired format 
+df.to_csv('modified.txt',index=False,sep='\t')
